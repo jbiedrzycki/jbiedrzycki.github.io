@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>four routes</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #c678dd;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="four-routes-of-cognitive-evolution">Four Routes of Cognitive Evolution</h1>
+<blockquote>
+<p>Four routes of cognitive evolution are distinguished: phylogenetic construction, in which natural selection produces qualitative change to the way a cognitive mechanism operates (language); phyloge- netic inflection, in which natural selection biases the input to a cognitive mechanism (imprinting and spatial memory); ontogenetic construction, in which developmental selection alters the way a cognitive mechanism operates (face recognition and theory of mind); and ontogenetic inflection, in which developmental selection changes the input to a cognitive mechanism (imitation). This framework integrates findings from evolutionary psychology (i.e., all research on the evolution of mentality and behavior). In contrast with human nativist evolutionary psychology, it recognizes the adaptive signifi- cance of developmental processes, conserves the distinction between cognitive and noncognitive mech- anisms, and encompasses research on human and nonhuman animals.</p>
+</blockquote>
+<p>This article characterizes a problem for evolutionary psychology and proposes a framework for its solution. Human nativist evolu- tionary psychology (HNEP), which claims that the mind consists of many innate cognitive modules, is currently the most prominent and influential approach to the evolutionary analysis of cognition. The problem is that this relatively isolated research enterprise is having a disproportionate impact on the internal direction and external perception of the field, and yet its central claim is based on controversial assumptions and weak empirical evidence. Two kinds of errors are likely in this situation; there is a risk that examples of adaptive specialization will be forced into the mod- ularity mold, regardless of whether the data genuinely support this interpretation, and that all evolutionary psychology, not just HNEP, will begin to be seen as flawed. The four routes framework presented here allows these errors to be avoided because it ac- knowledges the existence of cognitive modules, and thereby the valid claims of HNEP, but also provides a simple taxonomy enabling identification of other kinds of adaptive specialization. It can be used by all evolutionary psychologists—those that study human and nonhuman animals, constructivists, and selection the- orists as well as nativists—to frame research questions, to com- municate empirical claims, and to compare and integrate their findings. The four routes framework may, therefore, play a heu- ristic role in the reorientation of evolutionary psychology away from module hunting and toward broader and more integrative analyses of the effects of evolution on cognition.</p>
+<p>HNEP asserts that cognition is typically adaptive because phy- logenesis, the process of evolution through natural selection,1 has constructed a variety of domain-specific cognitive modules that are distinctive in terms of both their input (what information they process) and their mechanisms (how processing occurs; e.g., Cos- mides &amp; Tooby, 1992; Hirschfeld &amp; Gelman, 1994; Pinker, 1997). Each module processes information primarily or exclusively from one environmental domain (in which domains correspond to common-sense functional categories; e.g., language, social ex- change, and faces), and crucially, this information is processed by a cognitive mechanism that is distinctive in terms of the kinds of representations that it produces and manipulates and/or in relation to the rules that govern the production and manipulation of those representations.</p>
+<p>HNEP represents a small subset of research that could be accurately described as evolutionary psychology (Daly &amp; Wilson, 1999; Heyes, 2000; Karmiloff-Smith, 1992; Lang, Sober, &amp; Strier, 2001; Shettleworth, 1998). The universal set includes a variety of disciplines investigating the behavior and mentality of human and nonhuman animals without exclusive commitment to symbolism, adaptationism, or nativism (e.g., animal cognition, animal learn- ing, behavioral ecology, behavioral neuroscience, comparative psychology, evolutionary epistemology, ethology, and primatol- ogy). There are also many research projects in developmental psychology, cognitive psychology, and cognitive neuroscience that, although they do not address evolutionary issues explicitly, have a direct bearing on questions about the evolution of cognition.
+The framework presented in this article rests on several assump- tions that are broadly compatible with those of HNEP: (a) Com- putationalism, or the information processing approach, provides an appropriate level of explanation for the proximal causes of a broad range of behavior; (b) not all characteristics have evolved, and not all evolved characteristics are adaptive (Futuyma, 1998), but ques- tions about adaptive function have heuristic value in psychology; and (c) cognitive processes are products of natural selection—their existence, like that of other highly complex phenotypic attributes, currently has no other plausible scientific explanation. However, HNEP tends to make two further assumptions that are not shared by the present analysis: (a) The distinction between cognitive and noncognitive mechanisms is unimportant—it is profitable to char- acterize all behavior-control mechanisms as symbolic, as involving rule-governed transformation of representations (Cosmides &amp; Tooby, 1994; Shapiro &amp; Epstein, 1998); and (b) natural selection is the only source of adaptive properties of cognitive processes— ontogenetic processes are merely means through which natural selection achieves adaptive change (Pinker, 1997).</p>
+<p>It is argued, by contrast, that evidence from evolutionary psy- chology as a whole indicates that it is important for evolutionary analysis to conserve the distinction between cognitive and non- cognitive mechanisms and between behavior-control mechanisms that are guided by knowledge or expectancies and are subject to interference (e.g., reasoning and decision making) and those that are controlled by stimulation and are relatively immune to inter- ference (e.g., early feature detection and orienting reflexes). This latter distinction is important not only because it marks substantial differences between the way behavior-control mechanisms operate online and is especially useful in comparisons between human and nonhuman animals but also because cognitive and noncognitive mechanisms may differ in the degree to which they are prone to adaptive modification. In addition to being products of natural selection, some ontogenetic processes are themselves sources of adaptive change to cognitive mechanisms. In other words, HNEP’s monolithic conception of cognitive evolution, the view that cog- nitive evolution occurs through phylogenetic construction alone, ignores two important distinctions: between change to cognitive and noncognitive mechanisms and between phylogenetic and on- togenetic sources of adaptive modification. In combination, these distinctions circumscribe four major routes of cognitive evolution: phylogenetic construction, phylogenetic inflection, ontogenetic construction, and ontogenetic inflection.</p>
+<p>The first section of this article presents the four routes frame- work in more detail, discusses potential objections, and considers in general terms the evidence required to classify examples of adaptive modification. The subsequent core of the article scruti- nizes evidence relating to a series of phenomena that have been claimed to be products of phylogenetic construction: imprinting, spatial memory, face processing, theory of mind, and imitation. In each case, it is argued that the proposed evidence of phylogenetic construction is at least equally compatible with the phenomenon having evolved via another, specified route. Thus, the second, third, and fourth sections present potential examples of phyloge- netic inflection, ontogenetic construction, and ontogenetic inflec- tion, respectively. Together, these sections illustrate the four routes framework and raise the possibility that phylogenetic construction is a relatively rare form of cognitive evolution.</p>
+<h2 id="four-routes">Four Routes</h2>
+<p>Four routes of cognitive evolution, four ways in which a cog- nitive process can change such that it produces more adaptive behavior, are distinguished here using two variables: the evolu- tionary source and the locus of the adaptive change (see Figure 1). The sources of change are natural selection, a gene-based evolu- tionary process, and developmental selection, a process of interaction between the developing organism and its environment dur-
+ing ontogeny. The loci of change are the cognitive mechanism
+itself, the computational device that processes information, and the
+input to the cognitive mechanism, the type or range of information
+3 processed.</p>
+<p>A route is described as phylogenetic when the source is natural selection and as ontogenetic when the source is developmental selection. It is called construction when the locus is a cognitive mechanism and inflection when the locus is input to the cognitive mechanism. Thus, in phylogenetic construction, natural selection changes the mechanism of a cognitive process; in phylogenetic inflection, natural selection biases the input to an unchanged cog- nitive mechanism; in ontogenetic construction, developmental se- lection effects change to a cognitive mechanism; and in ontoge- netic inflection, developmental selection biases input without changing the mechanism.</p>
+<p>A simple physiological analogy, in which a stomach stands for a cognitive mechanism, may clarify these distinctions. The amount of energy produced by the operation of a stomach could increase as a result of change in the activity of the enzymes that convert ingested material into nutrients (construction) or through alteration in the type and/or quantity of ingested material (inflection). A change in enzyme activity would be an example of phylogenetic construction if individuals with the new enzyme action had out- reproduced those with the old system because they have the new system. It would be ontogenetic construction if the shift from the old to the new system occurred within the lifetime of individuals and as a consequence of the material they ingested. Perhaps in this hypothetical digestive system, enzymes that are underused become unavailable, and those that are overused develop new properties. In the case of inflection, alteration in the type and/or quantity of ingested material would be phylogenetic inflection if it was due to the effects of natural selection on the creature’s jaws or dentition, structures that modulate input to the stomach. It would be onto- genetic inflection if the change in type and/or quantity of ingested material occurred within the lifetime of individuals and as a consequence of the material ingested. For example, consumption of the original set of materials may make owners of the stomach so big and strong that they can obtain a broader range or a new type of food.</p>
+<p>Use of a variety of different taxonomic principles would make room for exploration of diversity in cognitive evolution. For ex- ample, cases could be classified according to whether adaptation occurs under cultural influence, according to whether it consists in alteration of cortical or subcortical mechanisms, or according to the range of taxa in which the adaptation occurs. The four routes framework uses the source (phylogenetic vs. ontogenetic) and locus (mechanism vs. input) of change because these are the broadest and most foundational distinctions already used by evo- lutionary psychologists in their research. What is distinctive about evolutionary analysis is that it investigates not just mature form but origins, and phylogenetic and ontogenetic processes are the two
+4
+major alternative sources of mature form. Similarly, although
+many finer distinctions are possible, the divide between cognitive and noncognitive mechanisms is a fundamental division in post- behaviorist psychology (Neumann, 1984).</p>
+<h2 id="source-phylogenetic-versus-ontogenetic">Source: Phylogenetic Versus Ontogenetic</h2>
+<p>The source of an adaptive feature of a cognitive process is phylogenetic if that feature was specifically favored by natural selection—if, in the course of evolutionary history, cognitive phe- notypes that included the target feature out-reproduced those that lacked the feature and did so because they possessed the target feature. By contrast, the source of an adaptive feature of a cogni- tive process is ontogenetic if the feature was not specifically favored by natural selection but is instead generated in the course of development as a product of cognitive and other behavior- control processes operating on environmental input. In other words, the information that enables a system feature to fit its environment comes from natural selection in the case of phyloge- netic evolution and development in the case of ontogenetic evo- lution (D. T. Campbell, 1974).</p>
+<p>In line with HNEP (Pinker, 1997) and nativist views of cogni- tion more generally (Chomsky, 1959; Fodor, 2000), an example of cognitive evolution is assumed to be phylogenetic if there is evidence of “poverty of the stimulus”—that the adaptive properties of the cognitive process could not have arisen through experience alone—or if there is evidence that the adaptive properties are genetically heritable. Conversely, it is classed as ontogenetic if the evidence suggests “wealth of the stimulus”—that the adaptive properties could be products of experience—and if there is no evidence that the adaptive properties are genetically heritable. Research relevant to the poverty or wealth of the stimulus com- pares the development of cognitive processes across species, cul- tures, and subgroups within a population. Wealth is indicated by correlated variation in experience and development, whereas pov- erty is implied by invariant development in the face of experiential diversity.</p>
+<p>This distinction between phylogenetic and ontogenetic sources is not a crude nature–nurture dichotomy. It acknowledges that, like all other phenotypic attributes, cognitive processes are produced jointly by genetic and developmental processes (Mayr, 1974). The information obtained through natural selection and stored in the genotype cannot produce a phenotype without developmental pro- cesses of some kind, and development cannot yield phenotypic outcomes that are outside the potential of the genotype. However, development is not always tightly genetically constrained or can- alized (Waddington, 1959) such that it does all and only what natural selection “desires.” Development can produce outcomes, some of them adaptive, that were not anticipated (not specifically favored) by natural selection, and these outcomes may be said to have an ontogenetic source (D. T. Campbell, 1974; Karmiloff- Smith, 1992).</p>
+<p>A morphological example may clarify the distinction between phylogenetic and ontogenetic sources of adaptive change: Many people who worked in the ancient Chinese silk industry had serrated finger nails. The end of each nail had a zigzag shape, and the points were used to tease silk fibers. There is no doubt that the silk workers’ fingernails were joint products of natural selection and developmental processes, but it is still legitimate to ask which of these kinds of processes was responsible for the serrated shape. In principle, this feature could have had a phylogenetic source. Over generations in a silk-working subpopulation, people who inherited a mutation for serrated nails may have out-reproduced those who did not because they were more efficient at silk pro- cessing. Alternatively, and much more plausibly, the serrated shape may have had an ontogenetic source. The silk workers had the same fingernail-relevant genes as other members of the pop- ulation, and these genes had not been favored by natural selection because they contributed to the development of nails that could, in certain environments, become serrated and assist in silk produc- tion. Instead, the silk workers learned, initially by trial and error and subsequently through social learning, that serrated nails facil- itate silk teasing and therefore adopted the practice of clipping their nails into multiple points. In an analogous sense, whereas every cognitive process is a joint product of natural selection and developmental processes, a feature of a cognitive process, such as its input domain or some property of its mechanism, may be adaptive by virtue of either phylogenesis or ontogenesis.</p></body>
+</html>
