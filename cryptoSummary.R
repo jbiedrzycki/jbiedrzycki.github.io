@@ -14,7 +14,7 @@
 # 157S....hqFg,BTC,10.11
 
 # 5. Set a path to your CSV file
-inFile<-"~/Work/R/DEV/cryptoSummary/p.csv"
+inFile<-"~/Work/R/DEV/cryptoSummary/example.csv"
 
 # 6. Start using the script in shell using 'Rscript <path>/cryptoSummary.R'
 
@@ -28,7 +28,7 @@ library(RCurl,quietly=TRUE)
 library(jsonlite,quietly=TRUE)
 library(dplyr,quietly=TRUE,warn.conflicts=FALSE)
 
-options(digits=2)
+options(digits=10)
 
 cmcJSON<-getURL("https://api.coinmarketcap.com/v1/ticker/?convert=NOK")
 cmcRAW<-fromJSON(cmcJSON)
