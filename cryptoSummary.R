@@ -28,7 +28,7 @@ library(RCurl,quietly=TRUE)
 library(jsonlite,quietly=TRUE)
 library(dplyr,quietly=TRUE,warn.conflicts=FALSE)
 
-options(digits=10)
+options(digits=2, scipen=100)
 
 cmcJSON<-getURL("https://api.coinmarketcap.com/v1/ticker/?convert=NOK")
 cmcRAW<-fromJSON(cmcJSON)
