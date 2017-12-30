@@ -30,7 +30,7 @@ library(dplyr,quietly=TRUE,warn.conflicts=FALSE)
 
 options(digits=2, scipen=100)
 
-cmcJSON<-getURL("https://api.coinmarketcap.com/v1/ticker/?convert=NOK")
+cmcJSON<-getURL("https://api.coinmarketcap.com/v1/ticker/?convert=NOK&limit=0")
 cmcRAW<-fromJSON(cmcJSON)
 cmc<-cmcRAW[,c("symbol","price_usd","price_nok","last_updated")]
 cmc$price_usd<-as.numeric(cmc$price_usd)
